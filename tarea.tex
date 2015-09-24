@@ -1,0 +1,150 @@
+\documentclass[titlepage]{article}
+\usepackage[spanish, es-tabla]{babel}%indica idioma 
+\usepackage[utf8]{inputenc}%acentos diréctos 
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{enumerate}
+
+\begin{document}
+
+\begin{titlepage}
+
+%\begin{figure}
+%	\includegraphics[scale=0.5]{logo.png} 
+%	%\hspace{70mm}
+%%	\includegraphics[scale=0.5]{polimi.jpg} 
+%\end{figure}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
+
+\center % Center everything on the page
+ 
+%----------------------------------------------------------------------------------------
+%	HEADING SECTIONS
+%----------------------------------------------------------------------------------------
+
+\textsc{\LARGE Instituto Politécnico Nacional}\\[1.5cm] % Name of your university/college
+\textsc{\Large Sistemas operativos en tiempo real}\\[0.5cm] % Major heading such as course name
+\textsc{\large }\\[0.5cm] % Minor heading such as course title
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\HRule \\[0.4cm]
+{ \huge \bfseries Definición de un sistema operativo en tiempo real}\\[0.4cm] % Title of your document
+\HRule \\[1.5cm]
+ 
+%----------------------------------------------------------------------------------------
+%	AUTHOR SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{minipage}{0.4\textwidth}
+\begin{flushleft} \large
+\emph{Estudiante:}\\
+Solano Juárez José Santiago
+\end{flushleft}
+\end{minipage}
+~
+\begin{minipage}{0.4\textwidth}
+\begin{flushright} \large
+\emph{Profesor:       } \\
+Lamberto
+\end{flushright}
+\end{minipage}\\[3cm]
+
+% If you don't want a supervisor, uncomment the two lines below and remove the section above
+%\Large \emph{Author:}\\
+%John \textsc{Smith}\\[3cm] % Your name
+
+%----------------------------------------------------------------------------------------
+%	DATE SECTION
+%----------------------------------------------------------------------------------------
+
+{\large \today}\\[3cm] % Date, change the \today to a set date if you want to be precise
+
+
+
+\vfill % Fill the rest of the page with whitespace
+
+\end{titlepage}
+\section{Definición de un sistema operativo en tiempo real-SOTR}
+En la actualidad utilizamos diversos dispositivos que contienen un sistema operativo con el cuál son administradas cada una de las tareas que realizan los dispositivos en si. Para poder entender de una mejor manera los sistemas operativos en tiempo real es necesario primero entender qué es un sistema operativo. 
+\subsection{Sistema operativo-SO}
+Primero empecemos por nombrar algunos tipos de sistemas operativos que existen y son comúnmente conocidos: 
+\begin{itemize}
+\item Windows 
+\item MSDOS
+\item Mac OS
+\item Unix
+\item BSD
+\item Android
+\item IOS
+\item Windows Phone 
+\item Distribución GNU/Linux
+\end{itemize}
+
+Dados los sistemas operativos mencionados anteriormente, podemos darnos una idea de las características que cuentan cada uno de ellos. Por ejemplo, contienen un conjunto de programas que interactúan con el hardware para facilitar al usuario, el aprovechamiento de los recursos disponibles. 
+
+Cabe mencionar que los sistemas operativos enlistados con anterioridad son llamados sistemas operativos de propósito general. Dichos sistemas operativos son responsables de administrar los recursos del hardware de una computadora y alojar las aplicaciones que se ejecutan en ella. 
+
+Así entonces se pueden mencionar algunos objetivos principales que caracterizan a los sistemas operativos: 
+
+\begin{itemize}
+\item Provee de un ambiente conveniente de trabajo 
+\item Hace uso eficiente del hardware 
+\item Provee de una adecuada distribución de los recursos 
+\item Gobierna el sistema
+\item Asigna los recursos
+\item Administra y controla la ejecución de los programas 
+\end{itemize}
+
+
+Algunas partes primordiales de los sistemas operativos son las siguientes: 
+
+\subsection*{Llamadas al sistema}
+Al sistema operativo en conjunto con el hardware se le conoce por el usuario como un solo dispositivo que contiene instrucciones más flexibles y variadas, a las que se le conoce como llamadas al sistema (System callings).
+\subsection*{Intérprete de comandos}
+Comúnmente conocido como terminal o Shell (por su nombre en inglés), el cuál es un programa que interpreta comandos (órdenes) dados por el usuario que son convertidos en llamadas al sistema. 
+\subsection*{Núcleo}
+También conocido como Kernel, es el encargado de definir las prioridades de los procesos que se ejecutarán, así como sincronizar su activación. 
+\subsection*{Programas del sistema}
+Son todos aquellos programas que deben ser ejecutados explícitamente por el usuario. A continuación se enlistan algunos de ellos. 
+\begin{enumerate}[A)]
+\item Compiladores
+Programas que traducen programas fuente en programas objeto.
+\item Ensambladores 
+Son aquellos que traducen programas escritos con mnemónicos a lenguaje máquina.
+\item Editores
+Son programas que permiten escribir textos y guardarlos en memoria secundaria.
+\item Utilerías de archivos
+Programas que tienen como objetivo dar mantenimiento a los archivos. 
+\item Bibliotecas 
+Son aquellos programas que contienen rutinas para realizar funciones frecuentemente requeridas. Dichas funciones pueden ser relacionadas a los programas escritos por el usuario. 
+
+\end{enumerate}
+\subsection{Sistema operativo en tiempo real-SOTR}
+Una vez mencionado las características principales de un sistema operativo se puede llegar a la explicación de que es un sistema operativo en tiempo real. Las características notables de este tipo de sistemas operativos son las siguientes: 
+\begin{itemize}
+\item Objetivo genera es proporcionar rápidos tiempos de respuesta. 
+\item Procesar ráfagas de miles de interrupciones por segundo sin perder un solo suceso.
+\item El proceso se activa tras la ocurrencia del suceso, esto se realiza mediante una interrupción. 
+\item Generalmente se utilizan en entornos donde deben ser aceptados y procesados una gran cantidad de sucesos, la mayoría de estos externos, en breve tiempo o dentro de ciertos plazos. 
+
+\end{itemize}
+
+Analizando las características antes mencionadas, se puede notar que un sistema operativo en tiempo real es considerado tal si éste tiene un máximo conocimiento del tiempo de cada una de los sucesos críticos que se están desarrollando o por lo menos garantizar ese máximo conocimiento la mayor parte del tiempo.  
+
+Una de las diferencias notables entre un sistema operativo en tiempo real y un sistema operativo es que el segundo tiene asignadas diferentes tareas a ejecutar y el usuario le da esa prioridad al sistema de su ejecución, mientras que un sistema operativo en tiempo real por lo general está orientado hacia una tarea específica en la cuál se requiere de cierta, en gran medida mucha, precisión en las mediciones del tiempo que será requerido para la realización de las tareas. Así mismo, este tipo de sistemas operativos se basan en la utilización de interrupciones, con las cuales dan surgimiento (dando prioridad) al evento causado por dicha interrupción. 
+
+Por ejemplo, si se está diseñando un sistema de bolsas de aire para un automóvil se deberá tener en cuenta que un mínimo error en tiempo (que cause que la bolsa de aire se expanda demasiado rápido o demasiado tarde) puede llegar a causar un problema al usuario, ya sean lesiones o incluso la muerte. En este caso se puede percibir que es necesario de la utilización de un SOTR. Se necesita asegurar que ninguna operación excederá alguna consideración de tiempo dado. 
+\section{Bibliografía}
+
+\begin{itemize}
+\item http://sistemas.unla.edu.ar/sistemas/sls/ls-4-sistemas-operativos/pdf/SO-L-RTOS.pdf
+\item http://www.ni.com/white-paper/3938/en/ 
+\item http://sistemasoperativos.angelfire.com/html/1.4.2.html
+\end{itemize}
+
+\end{document}
